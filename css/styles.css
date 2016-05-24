@@ -305,10 +305,29 @@ p {
 .sliderPage span {
 	color: #fff;
 }
+
 .aboutPage {
 	background: #fff;
 	height: 100vh;
 	padding-top: 30px;
+}
+
+.about span, .about a {
+	color: #f7484e;
+	font-family: "Grandesign", Helvetica Neue, Helvetica, Arial, sans-serif;
+	padding-left: 30px;
+	font-size: 19px;
+}
+
+.about a {
+	padding-left: 3px;
+	text-decoration: none;
+}
+
+.about p {
+	padding-left: 30px;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .aboutPage h1 {
@@ -320,7 +339,7 @@ p {
 
 /* done for margin-top */
 .mar {
-	margin-top: 70vh;
+	margin-top: 55vh;
 }
 
 .aboutPage .main-nav {

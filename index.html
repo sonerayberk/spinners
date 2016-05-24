@@ -4,9 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Soner Ayberk | Spinner </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+	<link href="css/slider.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<link href='css/fonts.css' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/slider.js"></script>
 </head>
 <body>
 		<div class="mainPage" id="main" data-viewport-height="100">
@@ -47,7 +49,10 @@
 				<div class="box"></div>
 			</div>
 			<div class="thirdSpinner">
-			</div>
+				<!-- class created for padding top -->
+				<div class="marlo"> 
+					<div class="loading"></div></div>
+				</div>
 			<div class="fourthSpinner">
 			</div>
 			<div class="fifthSpinner">
@@ -64,6 +69,61 @@
 					<li class="nav-item"><a href="#" id="aboutlink">ABOUT</a></li>
 				</ul>
 			</nav>
+
+			<div id="pageContainer">
+  <!-- Slideshow HTML -->
+    <div id="slideshow">
+    <div id="slidesContainer">
+      <div class="slide">
+        <h2>CSS3 Animations</h2>
+        <p>CSS3 animations allows animation of most HTML elements without using JavaScript or Flash!</p>
+        <p>An animation lets an element gradually change from one style to another.
+
+You can change as many CSS properties you want, as many times you want.
+
+To use CSS3 animation, you must first specify some keyframes for the animation.
+
+Keyframes hold what styles the element will have at certain times.
+</p>
+      </div>
+      <div class="slide">
+        <h2>The @keyframes Rule</h2>
+        <p>When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current style to the new style at certain times.
+
+To get an animation to work, you must bind the animation to an element.</p> 
+        <p>
+        Each @keyframes at-rule defines what should happen at specific moments during the animation. For example, 0% is the beginning of the animation and 100% is the end. These keyframes can then be controlled either by the shorthand animation property, or its eight sub-properties, to give more control over how those keyframes should be manipulated.
+        </p>
+      </div>
+      <div class="slide">
+        <h2>Sub-properties (part 1)</h2>
+        <ul>
+          <li> animation-name: declares the name of the @keyframes at-rule to manipulate. </li>
+          <li> animation-duration: the length of time it takes for an animation to complete one cycle. </li>
+          <li> animation-timing-function: establishes preset acceleration curves such as ease or linear. </li>
+          <li> animation-delay: the time between the element being loaded and the start of the animation sequence. </li>
+        </ul>
+      </div>
+      <div class="slide">
+        <h2>Sub-properties (part 2)</h2>
+        <ul>
+          <li> animation-iteration-count: the number of times the animation should be performed. </li>
+          <li> animation-fill-mode: sets which values are applied before/after the animation.
+For example, you can set the last state of the animation to remain on screen, or you can set it to switch back to before when the animation began. </li>
+          <li> animation-play-state: pause/play the animation. </li>
+        </ul>
+      </div>
+      <div class="slide">
+        <h2> Multiple steps </h2>
+        <p> If an animation has the same starting and ending properties, it's useful to comma-separate the 0% and 100% values inside @keyframes. </p>
+        <p> You can comma-separate the values to declare multiple animations on a selector as well. In the example below, we want to change the color of the circle in a @keyframe whilst also nudging it from side to side with another. </p>
+      </div>
+    </div>
+  </div>
+  <!-- Slideshow HTML -->
+</div>
+
+
 		</div>
 		
 		<div class="aboutPage" id="about" data-viewport-height="100">

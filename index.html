@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Soner Ayberk | Spinner </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<link href='css/fonts.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+		<div class="mainPage" id="main" data-viewport-height="100">
+			<header class="codrops-header">
+				<h1 class="font"> Main Page </h1>
+			</header>
+			<div class="image">
+				<div id="circle1" class="circleAnimation"></div>
+				<div id="circle2" class="circleAnimation"></div>
+				<div id="circle3" class="circleAnimation"></div>
+				<div id="circle4" class="circleAnimation"></div>
+				<div id="circle5" class="circleAnimation"></div>
+			</div>
+			<nav class="main-nav" id="sidebar">
+				<ul>				
+					<li class="nav-item"><a href="#" id="spinnerlink">SPINNERS</a> <span class="nav-span"> / </span></li>
+					<li class="nav-item"><a href="#" id="sliderlink">SLIDER</a> <span class="nav-span"> / </span></li>
+					<li class="nav-item"><a href="#" id="aboutlink">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="spinnerLogoPage" data-viewport-height="100" id="spinner">
+			<h1 class="font"> Spinner Page </h1>
+			<div class="className"></div>
+			<nav class="main-nav" id="sidebar">
+				<ul>
+					<li class="nav-item"><a href="#" id="mainlink">MAIN</a> <span class="nav-span"> / </span></li>		
+					<li class="nav-item"><a href="#" id="spinnerlink">SPINNERS</a> <span class="nav-span"> / </span></li>
+					<li class="nav-item"><a href="#" id="sliderlink">SLIDER</a> <span class="nav-span"> / </span></li>
+					<li class="nav-item"><a href="#" id="aboutlink">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="spinnerPage" data-viewport-height="100">	
+			<div class="secondSpinner">
+				<div class="box"></div>
+			</div>
+			<div class="thirdSpinner">
+			</div>
+			<div class="fourthSpinner">
+			</div>
+			<div class="fifthSpinner">
+			</div>
+		</div>
+
+		<div class="sliderPage" id="slider" data-viewport-height="100">
+			<h1 class="font"> Slider Page </h1>
+			<nav class="main-nav" id="sidebar">
+				<ul>
+					<li class="nav-item"><a href="#" id="mainlink">MAIN</a> <span class="nav-span"> / </span></li>		
+					<li class="nav-item"><a href="#" id="spinnerlink">SPINNERS</a> <span class="nav-span"> / </span></li>
+					<li class="nav-item"><a href="#" id="sliderlink">SLIDER</a> <span class="nav-span"> / </span></li>
+					<li class="nav-item"><a href="#" id="aboutlink">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		<div class="aboutPage" id="about" data-viewport-height="100">
+			<h1 class="font"> About Page </h1>
+			<p> This page soon will be about me. Soner Ayberk</p>
+			<div class="mar"> 
+				<nav class="main-nav" id="sidebar">
+					<ul>
+						<li class="nav-item"><a href="#" id="mainlink">MAIN</a> <span class="nav-span"> / </span></li>		
+						<li class="nav-item"><a href="#" id="spinnerlink">SPINNERS</a> <span class="nav-span"> / </span></li>
+						<li class="nav-item"><a href="#" id="sliderlink">SLIDER</a> <span class="nav-span"> / </span></li>
+						<li class="nav-item"><a href="#" id="aboutlink">ABOUT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<script>
+/*			var parent = document.getElementById('con1');
+			var child = document.getElementById('container');
+			child.style.paddingRight = child.offsetWidth - child.clientWidth + "px";*/	
+		    
+		    function goToByScroll(id){
+		          // Reove "link" from the ID
+		        id = id.replace("link", "");
+		          // Scroll
+		        $('html,body').animate({
+		            scrollTop: $("#"+id).offset().top},
+		            'slow');
+		    }
+
+		    $("#sidebar > ul > li > a").click(function(e) { 
+		          // Prevent a page reload when a link is pressed
+		        e.preventDefault(); 
+		          // Call the scroll function
+		        goToByScroll($(this).attr("id"));           
+		    });
+		</script>
+</body>
+</html>

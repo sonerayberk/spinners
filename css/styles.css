@@ -255,7 +255,7 @@ p {
     width: 50px;
   	height: 50px;
   	border: 0.35rem solid #C0C0C0;
-  	border-top-color: #B55555;
+  	border-top-color: rgba(255, 255, 255, 0.2);
     animation: spin 1s infinite linear;
 }
 
@@ -274,10 +274,173 @@ p {
 	background-color: #f7484e;
 }
 
+.fourthSpinner .marlo {
+	padding-left: 50px; /* to align-center*/
+}
+
+@keyframes down-up {
+  50% {
+    background: white;
+  }
+}
+
+.loading-pulse {
+  position: relative;
+  margin: 0 auto;
+  width: 16px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: down-up 750ms infinite;
+  animation-delay: 250ms;
+}
+
+.loading-pulse:before, .loading-pulse:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 26px;
+  width: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: down-up 750ms infinite;
+}
+
+.loading-pulse:before {
+  left: -22px;
+}
+
+.loading-pulse:after {
+  left: 22px;
+  animation-delay: 500ms;
+}
+
 .fifthSpinner {
 	width: 100%;
 	height: 25vh;
 	background-color: #f7484e;
+}
+
+
+#loadingText{
+	width:240px;
+	margin:auto;
+}
+
+.loadingText{
+	color: rgba(255, 255, 255, 0.2);
+	font-family: Arial, Sans-Serif;
+	font-size:25px;
+	float:left;
+	animation-name:bounce_fountainTextG;
+		-o-animation-name:bounce_fountainTextG;
+		-ms-animation-name:bounce_fountainTextG;
+		-webkit-animation-name:bounce_fountainTextG;
+		-moz-animation-name:bounce_fountainTextG;
+	animation-duration:1.82s;
+		-o-animation-duration:1.82s;
+		-ms-animation-duration:1.82s;
+		-webkit-animation-duration:1.82s;
+		-moz-animation-duration:1.82s;
+	animation-iteration-count:infinite;
+		-o-animation-iteration-count:infinite;
+		-ms-animation-iteration-count:infinite;
+		-webkit-animation-iteration-count:infinite;
+		-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+		-o-animation-direction:normal;
+		-ms-animation-direction:normal;
+		-webkit-animation-direction:normal;
+		-moz-animation-direction:normal;
+	transform:scale(.5);
+		-o-transform:scale(.5);
+		-ms-transform:scale(.5);
+		-webkit-transform:scale(.5);
+		-moz-transform:scale(.5);
+}#fountainTextG_1{
+	animation-delay:0.65s;
+		-o-animation-delay:0.65s;
+		-ms-animation-delay:0.65s;
+		-webkit-animation-delay:0.65s;
+		-moz-animation-delay:0.65s;
+}
+#fountainTextG_2{
+	animation-delay:0.78s;
+		-o-animation-delay:0.78s;
+		-ms-animation-delay:0.78s;
+		-webkit-animation-delay:0.78s;
+		-moz-animation-delay:0.78s;
+}
+#fountainTextG_3{
+	animation-delay:0.91s;
+		-o-animation-delay:0.91s;
+		-ms-animation-delay:0.91s;
+		-webkit-animation-delay:0.91s;
+		-moz-animation-delay:0.91s;
+}
+#fountainTextG_4{
+	animation-delay:1.04s;
+		-o-animation-delay:1.04s;
+		-ms-animation-delay:1.04s;
+		-webkit-animation-delay:1.04s;
+		-moz-animation-delay:1.04s;
+}
+#fountainTextG_5{
+	animation-delay:1.17s;
+		-o-animation-delay:1.17s;
+		-ms-animation-delay:1.17s;
+		-webkit-animation-delay:1.17s;
+		-moz-animation-delay:1.17s;
+}
+#fountainTextG_6{
+	animation-delay:1.3s;
+		-o-animation-delay:1.3s;
+		-ms-animation-delay:1.3s;
+		-webkit-animation-delay:1.3s;
+		-moz-animation-delay:1.3s;
+}
+#fountainTextG_7{
+	animation-delay:1.43s;
+		-o-animation-delay:1.43s;
+		-ms-animation-delay:1.43s;
+		-webkit-animation-delay:1.43s;
+		-moz-animation-delay:1.43s;
+}
+#fountainTextG_8{
+	animation-delay:1.56s;
+		-o-animation-delay:1.56s;
+		-ms-animation-delay:1.56s;
+		-webkit-animation-delay:1.56s;
+		-moz-animation-delay:1.56s;
+}
+#fountainTextG_9{
+	animation-delay:1.69s;
+		-o-animation-delay:1.69s;
+		-ms-animation-delay:1.69s;
+		-webkit-animation-delay:1.69s;
+		-moz-animation-delay:1.69s;
+}
+#fountainTextG_10{
+	animation-delay:1.82s;
+		-o-animation-delay:1.82s;
+		-ms-animation-delay:1.82s;
+		-webkit-animation-delay:1.82s;
+		-moz-animation-delay:1.82s;
+}
+
+
+
+
+@keyframes bounce_fountainTextG{
+	0%{
+		transform:scale(1);
+		color: rgba(255, 255, 255, 0.2);
+	}
+
+	100%{
+		transform:scale(.5);
+		color:#FFFFFF;
+	}
 }
 
 .menu {
@@ -508,6 +671,4 @@ p {
 	#pageContainer {
 		display: none;
 	}
-
-
 }

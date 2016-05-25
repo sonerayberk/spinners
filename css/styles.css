@@ -27,8 +27,6 @@ p {
 }
 
 .mainPage h1 { 
-	margin: 0;
-	padding-left: 30px;
 	margin-top: 30px;
 }
 
@@ -47,17 +45,16 @@ p {
 	margin: 0 auto;
 	height: 570px;
 	position: relative;
-}
-
-.image img {
-	padding-top: 20px;
-	width: 400px;
-	height: 550px;
+	margin-left: -60px;
 }
 
 .main-nav {
 	margin: 0 auto;
 	width: 300px;
+}
+
+.main-nav ul {
+	padding-left: 20px;
 }
 
 .main-nav a {
@@ -102,9 +99,13 @@ p {
 	border-bottom: 1px solid #fff; /* i dont know whats wrong */
 }
 
+.mar-sp-log-nav {
+	width: 350px;
+	margin: 0 auto;
+}
+
 .spinnerLogoPage .main-nav {
-	margin-left: 20%;
-	width: 400px;
+	width: 350px;
 }
 
 .spinnerLogoPage .main-nav a {
@@ -121,7 +122,6 @@ p {
 .spinnerLogoPage h1 {
 	text-align: center;
 	padding-top: 35px;
-	margin-left: -55px;
 	color: #fff;
 	font-size: 45px;
 	line-height: 0.75;
@@ -129,6 +129,7 @@ p {
 }
 
 .spinnerPage {
+	display: block;
 	overflow: hidden;
 	min-height: 100vh;
 	width: 48.9vw;
@@ -144,9 +145,7 @@ p {
 }
 
 .box {
-	position: absolute;
-	margin-left: 22%;
-	margin-top: 1%;
+	margin: 0 auto;
 	width: 15px;
 	height: 15px;
 	border-radius: 50%;
@@ -245,6 +244,8 @@ p {
 
 .marlo {
 	padding-top: 60px;
+	width: 0px; /* to align-center*/
+	margin: 0 auto;
 }
 
 .loading {
@@ -278,6 +279,10 @@ p {
 	background-color: #f7484e;
 }
 
+.menu {
+	display: none;
+}
+
 .sliderPage {
 	background: #f7484e;
 	height: 100vh;
@@ -292,7 +297,7 @@ p {
 }
 
 .sliderPage .main-nav {
-	width: 400px;
+	width: 350px;
 }
 
 .sliderPage .main-nav a {
@@ -304,6 +309,10 @@ p {
 
 .sliderPage span {
 	color: #fff;
+}
+
+.mobileSlider {
+	display: none;
 }
 
 .aboutPage {
@@ -331,19 +340,19 @@ p {
 }
 
 .aboutPage h1 {
-	width: 220px;
-	margin: 0 auto;
-	font-size: 45px;
+	text-align: center;
 	color: black;
+	font-size: 45px;
+	position: relative;
 }
 
 /* done for margin-top */
 .mar {
-	margin-top: 55vh;
+	margin-top: 48vh;
 }
 
 .aboutPage .main-nav {
-	width: 360px;
+	width: 350px;
 }
 
 .aboutPage .main-nav a{
@@ -404,6 +413,11 @@ p {
    	100%{transform:rotate(360deg);}
 }
  
+ .mar-sp-log-circle {
+	 width: 309px;
+	 margin: 0 auto;
+ }
+ 
 .className {
   	width: 300px;
   	height: 300px;
@@ -413,6 +427,80 @@ p {
   	border-right: none;
   	border-left: none;
   	position: relative;
-  	left: 25%;
   	margin-top: 20%;
   }
+  
+  @media only screen and (min-width: 150px) and (max-width: 1020px) 
+{
+	.spinnerLogoPage {
+		width: 100vw;
+		border-bottom: none;
+	}
+
+	
+	.className {
+  	width: 300px;
+  	height: 300px;
+  	border: 3px solid #fff;
+  	border-radius: 50%;
+  	border-bottom: none;
+  	border-right: none;
+  	border-left: none;
+  	position: relative;
+	margin-top: 20%;
+	}
+
+	.spinnerPage {
+		width: 100vw;
+		margin-top: 0;
+		margin-left: 0;
+	}
+	
+	.secondSpinner {
+		height: 20vh;
+	}
+	
+	.thirdSpinner {
+		height: 20vh;
+	}
+	
+	.fourthSpinner {
+		height: 20vh;
+	}
+	
+	.menu {
+		display: block;
+		height: 20vh;
+		background-color: #f7484e;
+	}
+	
+	.menu .main-nav {
+		width: 260px;
+		padding-top: 30px;
+	}
+	
+	.menu .main-nav a {
+		color: #fff;	
+		letter-spacing: 1px;
+		font-weight: 700;
+		font-size: 15px;
+	}
+	
+	.menu span {
+		color: #fff;
+	}
+	
+	.mobileSlider {
+		display: block;
+	}
+	
+	.mobileSlider h2 {
+		padding-top: 30%;
+		text-align: center;
+		font-size: 45px;
+	}
+	
+	#pageContainer {
+		display: none;
+	}
+}

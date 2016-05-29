@@ -547,11 +547,11 @@ p {
 {
 	.spinnerLogoPage {
 		width: 100vw;
+		border-bottom: none;
 	}
 	
 	.spinnerLogoPage .main-nav{
 		display: none;
-		border-bottom: none;
 	}
 
 	.nav-span {
